@@ -1,0 +1,367 @@
+.skdslider {
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 650px;
+  &:after {
+    content: '';
+    padding-top: 50%;
+    display: block;
+  }
+  ul {
+    &.slides {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: none;
+        img {
+          width: 100%;
+          border: 0;
+        }
+      }
+    }
+    &.slide-navs {
+      bottom: 20px;
+      left: 50%;
+      position: absolute;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        float: left;
+        height: 12px;
+        width: 12px;
+        margin-right: 4px;
+        cursor: pointer;
+        &.current-slide {}
+      }
+    }
+  }
+  .slide-desc {
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    bottom: 28%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    > {
+      h3 {
+        color: #ffffff;
+        font-size: 50px;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 100%;
+        margin: 0 auto;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      p {
+        color: #FFFFFF;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0px auto 20px;
+        width: 42%;
+        padding: 12px;
+      }
+      a.more {
+        color: #990000;
+        font-size: 25px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  a {
+    &.prev {
+      /*-- background: url("../images/left.png") no-repeat scroll 0 0 transparent;* --*/
+      width: 35px;
+      height: 35px;
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 55%;
+      left: 2%;
+      margin-top: -17px;
+    }
+    &.next {
+      /*-- background: url("../images/right.png") no-repeat scroll 0 0 transparent;--*/
+      width: 35px;
+      height: 35px;
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 55%;
+      right: 2%;
+      margin-top: -17px;
+    }
+    &.prev:hover, &.next:hover {}
+    &.play {
+      /*-- background: url("../images/play.png") no-repeat scroll center center transparent;--*/
+      width: 35px;
+      height: 35px;
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      bottom: 6%;
+      right: 2%;
+      margin-top: -17px;
+    }
+    &.pause {
+      /*-- background: url(../images/pause.png) no-repeat scroll center center transparent;--*/
+      width: 35px;
+      height: 35px;
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      bottom: 6%;
+      right: 2%;
+      margin-top: -17px;
+    }
+  }
+}
+
+/*-- responsive media queries --*/
+/*Some Responsive CSS */
+@media (max-width: 1440px) {
+  .skdslider {
+    .slide-desc {
+      > {
+        p {
+          width: 70%;
+        }
+        h3 {
+          font-size: 38px;
+        }
+      }
+      bottom: 31%;
+    }
+    height: 680px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .skdslider {
+    height: 660px;
+    .slide-desc {
+      > {
+        h3 {
+          font-size: 36px;
+        }
+        p {
+          width: 75%;
+        }
+      }
+      bottom: 28%;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .skdslider {
+    height: 620px;
+    .slide-desc > p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .skdslider {
+    height: 550px;
+    .slide-desc > {
+      p {
+        font-size: 13px;
+        width: 85%;
+      }
+      h3 {
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .skdslider {
+    height: 530px;
+    .slide-desc > h3 {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .skdslider {
+    height: 510px;
+    .slide-desc > h3 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .skdslider {
+    height: 460px;
+    .slide-desc {
+      bottom: 20%;
+      > p {
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .skdslider {
+    .slide-desc > {
+      h3 {
+        font-size: 26px;
+        width: 100%;
+      }
+      p {
+        line-height: 22px;
+        letter-spacing: 0.5px;
+        font-size: 12.5px;
+        width: 90%;
+      }
+    }
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skdslider {
+    .slide-desc > {
+      h3 {
+        font-size: 24px;
+      }
+      p a.more {
+        font-size: 14px;
+      }
+    }
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .skdslider {
+    height: 390px;
+    .slide-desc {
+      bottom: 18%;
+    }
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .skdslider {
+    height: 350px;
+    .slide-desc {
+      bottom: 14%;
+      > p {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .skdslider {
+    height: 330px;
+    .slide-desc > {
+      h3 {
+        width: 100%;
+        font-size: 22px;
+      }
+      p {
+        padding: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skdslider {
+    height: 320px;
+    .slide-desc > {
+      h3 {
+        font-size: 22px;
+        letter-spacing: 2px;
+        width: 100%;
+      }
+      p {
+        padding: 6px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .skdslider {
+    height: 305px;
+    .slide-desc > p {
+      line-height: 20px;
+      letter-spacing: 0px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .skdslider {
+    height: 255px;
+    .slide-desc > p {
+      width: 93%;
+      padding: 8px;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .skdslider {
+    height: 220px;
+    .slide-desc {
+      bottom: 10%;
+      > h3 {
+        font-size: 20px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 384px) {
+  .skdslider {
+    height: 200px;
+    .slide-desc {
+      bottom: 2%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .skdslider {
+    height: 195px;
+    .slide-desc {
+      bottom: 1.5%;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .skdslider {
+    height: 168px;
+    .slide-desc {
+      bottom: -11%;
+      > h3 {
+        font-size: 15px;
+        width: 100%;
+      }
+    }
+  }
+}
